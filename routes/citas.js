@@ -20,8 +20,8 @@ router.post('/add', function (req, res, next) {
       cita,
       descripcion
     }, (err, cita) => {
+      console.log(err);
       if (err) return res.status(500).send(err);
-      // console.log(err);
       res.json(cita);
     })
 });
